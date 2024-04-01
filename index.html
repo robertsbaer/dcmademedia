@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letrsets</title>
+    <style>
+        :root {
+            --background-color: #282c34;
+            --text-color: #ffffff;
+            --accent-color: #61dafb;
+            --font-stack: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: var(--font-stack);
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .logo img {
+            margin-top: 20px;
+            height: 100px;
+            width: 100px;
+            transition: transform 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            width: 90%;
+            max-width: 400px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            background: transparent;
+            color: var(--text-color);
+        }
+
+        .contact-form input[type="submit"] {
+            cursor: pointer;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: darken(var(--accent-color), 10%);
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: lighten(var(--accent-color), 20%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="./icon.png" alt="Letrsets Logo">
+    </div>
+
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xjvnajnl" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <div class="links">
+        <a href="your-app-store-link" target="_blank">Download on the App Store</a> |
+        <a href="https://letrsets.com" target="_blank">Play online</a>
+    </div>
+
+</body>
+
+</html>
